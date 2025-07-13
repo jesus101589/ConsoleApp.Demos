@@ -71,7 +71,30 @@
             Console.WriteLine("************* End Logic Results *************");
 
 
+            /*
+             * Assignment Operations and Operators
+             */
+            // int randomValue = 5;
+            // int increaseValue = num1 + 5;
 
+            // num1 = num1 + 5;
+            
+            
+
+            Console.WriteLine("************* Assignment Results *************");
+            Console.WriteLine();
+            num1 += 5;
+            Console.WriteLine($"Num 1 is increased by 5: {num1}");
+            num1 -= 3;
+            Console.WriteLine($"Num 1 is reduced by 3: {num1}");
+            num1 /= 2;
+            Console.WriteLine($"Num 1 is divided by 2: {num1}");
+            num1 %= 2;
+            Console.WriteLine($"Num 1 mod by 2: {num1}");
+            num1 *= 10;
+            Console.WriteLine($"Num 1 is multiplied by 2: {num1}");
+            Console.WriteLine();
+            Console.WriteLine("************* End Assignment Results *************");
 
 
 
