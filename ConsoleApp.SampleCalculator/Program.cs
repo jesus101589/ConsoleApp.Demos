@@ -3,13 +3,6 @@
 // Welcome to the Sample Calculator Console Application!
 Console.WriteLine("Welcome to the Sample Calculator Console Application!");
 
-// Prompt the user for input
-Console.Write("Please enter the first number: ");
-int num1 = Convert.ToInt32(Console.ReadLine());
-
-Console.Write("Please enter the second number: ");
-int num2 = Convert.ToInt32(Console.ReadLine());
-
 // Show calculator options / Show Menu
 Console.WriteLine("Please select an operation");
 Console.WriteLine("1. Addition");
@@ -18,6 +11,11 @@ Console.WriteLine("3. Multiplication");
 Console.WriteLine("4. Division");
 int choice = Convert.ToInt32(Console.ReadLine());
 
+Console.Write("Please enter the first number: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Please enter the second number: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
 
 // Decide which operation is needed based on selected option
 //if(choice == 1)
