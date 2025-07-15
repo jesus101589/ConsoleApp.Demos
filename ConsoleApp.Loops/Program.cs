@@ -37,8 +37,8 @@ int num = 0;
 while(num != -1)
 {
     Console.Write("Please enter numbers to sum them up. (Enter -1 to exit.): ");
-    // Nested if statement
     num = Convert.ToInt32((Console.ReadLine()));
+    // Nested if Statement   
     if(num != -1)
     {
         sum += num;
@@ -49,3 +49,20 @@ Console.WriteLine($"The total sum is: {sum}");
 
 
 Console.WriteLine("*************** While Loop Completed ***************");
+
+
+Console.WriteLine("*************** Do While Loop ***************"); // runs through loop at least once then checks condition as opposed to while loop which checks condition first
+sum = 0; // Reset sum for Do While Loop
+num = 0; // Reset num for Do While Loop
+do
+{
+    Console.Write("Please enter numbers to sum them up. (Enter -1 to exit.): ");
+    num = Convert.ToInt32((Console.ReadLine()));
+    if (num != -1)
+    {
+        sum += num;
+    }
+
+} while(num != -1);
+Console.WriteLine($"The total sum is: {sum}");
+Console.WriteLine("*************** Do While Loop Completed ***************");
