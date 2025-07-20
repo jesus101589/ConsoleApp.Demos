@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+Console.WriteLine("********* - String Manipulation in C# - *********");
 
 // Initialize with a regular string literal.
 string s1 = "This a string literal."; // preferred way to initialize a string, using lower case 'string'
@@ -42,3 +42,12 @@ s1 += s2; // This is the same as the above line, but more concise.
 string newString = $"{s1} {s2} Some random literal text"; // String interpolation, preferred way to concatenate strings in C#.
 string newString1 = s1 + $"{s1} {s2} Some random literal text"; // Concatenation using the + operator, but not preferred for readability and performance reasons.
 string newString2 = String.Format("Literal string {0} {1}", s1, s2); // String.Format is less preferred than interpolation but still valid.
+
+/* String manupulation methods and properties */
+
+// Null or empty checks
+// Find the length of a string.
+
+Console.WriteLine($"{nameof(s1)} has a length of {s1.Length}");
+Console.WriteLine($"{nameof(s1)} has a length of {s4.Length}");
+
