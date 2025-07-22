@@ -51,3 +51,7 @@ string newString2 = String.Format("Literal string {0} {1}", s1, s2); // String.F
 Console.WriteLine($"{nameof(s1)} has a length of {s1.Length}");
 Console.WriteLine($"{nameof(s1)} has a length of {s4.Length}");
 
+// Substring
+string subString = s1.Substring(5);
+Console.WriteLine($"{nameof(subString)} : {subString}");
+subString = s1.Substring(5, 5); // Get a substring starting at index 5 with a length of 10.
