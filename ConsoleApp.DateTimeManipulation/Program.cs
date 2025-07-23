@@ -1,8 +1,14 @@
 ﻿Console.WriteLine("******* - DateTime Manipulation - *******");
 
-// Empty DateTime
+// Empty DateTime object
+DateTime dateTime = new DateTime();
 
 // Create a DateTime from date and time
+var dateofBirth = new DateTime(1989, 10, 15);
+Console.WriteLine($"My date of birth is: {dateofBirth}");
+
+var exactDateAndTimeOfBirth = new DateTime(1989, 10, 15, 20, 30, 45);
+Console.WriteLine($"My date of birth is: {exactDateAndTimeOfBirth}");
 
 // Create a DateTime from current timestamp
 
