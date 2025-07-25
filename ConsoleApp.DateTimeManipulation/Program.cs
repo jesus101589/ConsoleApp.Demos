@@ -43,12 +43,20 @@ Console.WriteLine("One day from now is: " + now.AddDays(1));
 Console.WriteLine("One day from now is: " + now.AddDays(-1));
 
 
-
 Console.WriteLine("******* - DateTime Offset Manipulation - *******");
-// UTC
+// UTC - Coordinated Universal Time
+var utcNow = DateTime.UtcNow;
+Console.WriteLine($"Now Date Time: {now}");
+Console.WriteLine($"Current UTC Date and Time: {utcNow}");
+
 
 // DateTimeOffset and TimeZone Information
+var tz = TimeZoneInfo.Local.GetUtcOffset( utcNow );
+Console.WriteLine($"User Time Zone: {tz}");
 
+var dto = new DateTimeOffset(now, tz);
+Console.WriteLine($"User Time Zone with UTC Offset: {dto}");
+Console.WriteLine($"UTC Time of Action: {dto.UtcDateTime}");
 
 Console.WriteLine("******* - Date only and Time only Manipulation - *******");
 
