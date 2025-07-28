@@ -15,8 +15,18 @@ int GetFiveYearsAgo()
 }
 
 
-// Methods with parameters
+// Methods with parameters - represents data being passed into the method
+void PrintNameWithParams(string name)
+{
+    // Method code
+    Console.WriteLine("Your name is: " + name);
+}
+int GetYearDifferenceWithParams(int year)
 
+{ 
+    int yearDifference = DateTime.Now.Year - year;
+    return yearDifference;
+}
 // Methods with optional parameters
 
 // Methods with nullable parameters
@@ -25,4 +35,13 @@ int GetFiveYearsAgo()
 /* Function Calls */
 PrintName();                                              
 int fiveYearsAgo = GetFiveYearsAgo();                       
-Console.WriteLine($"Five Years Ago was: {fiveYearsAgo}");                      
+Console.WriteLine($"Five Years Ago was: {fiveYearsAgo}");
+
+Console.WriteLine("Enter Your Name");
+string name1 = Console.ReadLine();
+PrintNameWithParams(name1);
+
+Console.WriteLine("Enter A Year");
+int pastYear = Convert.ToInt32(Console.ReadLine());
+int yearsAgo = GetYearDifferenceWithParams(pastYear);
+Console.WriteLine($"This Was {yearsAgo} Years Ago");
