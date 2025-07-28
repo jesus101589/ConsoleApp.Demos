@@ -14,13 +14,7 @@ while (choice != -1)
 {
     try
     {
-        Console.WriteLine("Please select an operation (-1 to exit program) ");
-        Console.WriteLine("1. Addition");
-        Console.WriteLine("2. Subtraction");
-        Console.WriteLine("3. Multiplication");
-        Console.WriteLine("4. Division");
-        Console.WriteLine("5. Fibonacci Sequence");
-        choice = Convert.ToInt32(Console.ReadLine());
+        PrintMenu();
 
         if (choice == -1)
         {
@@ -64,26 +58,24 @@ while (choice != -1)
         switch (choice)
         {
             case 1:
-                answer = num1 + num2;
+                answer = AddNumbers(num1, num2);
                 break;
             case 2:
-                answer = num1 - num2;
+                answer = SubtractNumbers(num1, num2);
                 break;
             case 3:
-                answer = num1 * num2;
+                answer = Product(num1, num2);
                 break;
             case 4:
-                answer = num1 / num2;
+                answer = Quotient(num1, num2);
                 break;
             case 5:
-                for (int i = 0; i <= num2; i++)
-                {
-                    answer += i;
-                }
+                answer = Fibonacci(num1, num2);
                 break;
             default:
                 throw new Exception("Invalid Menu Item Selected");
         }
+
         // Print output
         Console.WriteLine($"The result is: {answer}");
     }
@@ -112,4 +104,48 @@ while (choice != -1)
 
 }
 
+
+
 Console.WriteLine("*** Thank you for using the Sample Calculator Console Application! ***");
+
+// Method Definitions
+int AddNumbers(int num1, int num2)
+{
+    return num1 + num2;
+}
+
+int SubtractNumbers(int num1, int num2)
+{
+    return num1 - num2;
+}
+
+int Product(int num1, int num2)
+{
+    return num1 * num2; 
+}
+
+int Quotient(int num1, int num2)
+{
+    return num1 / num2;
+}
+
+int Fibonacci(int num1, int num2)
+{
+    var answer = 0;
+    for (int i = 0; i <= num2; i++)
+    {
+        answer += i;
+    }
+    return answer;
+}
+void PrintMenu()
+{
+    Console.WriteLine("Please select an operation (-1 to exit program) ");
+    Console.WriteLine("1. Addition");
+    Console.WriteLine("2. Subtraction");
+    Console.WriteLine("3. Multiplication");
+    Console.WriteLine("4. Division");
+    Console.WriteLine("5. Fibonacci Sequence");
+    choice = Convert.ToInt32(Console.ReadLine());
+
+}
