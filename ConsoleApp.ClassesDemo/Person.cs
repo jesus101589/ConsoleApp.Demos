@@ -1,8 +1,29 @@
 ﻿// Define a class
+using System.ComponentModel.Design;
 using System.Security.Cryptography;
 
 public class Person
 {
+
+    public Person() 
+    { 
+    
+    }
+
+    public Person(string firstName, string lastName, DateOnly dob) 
+    {
+        FirstName = firstName;
+        LastName = lastName;
+        DateOfBirth = dob;
+    }
+
+    public Person(string firstName, string lastName, string taxNumber)
+    {
+        FirstName = firstName;
+        LastName = lastName;
+        _taxNumber = taxNumber;
+    }
+
     // Properties/Data members
     public string FirstName { get; set; }
     public string LastName { get; set; }
@@ -23,8 +44,18 @@ public class Person
 
     public void GenerateTaxNumber()
     {
-        _taxNumber = RandomNumberGenerator.GetInt32(100000, 999999).ToString();
+        if (string.IsNullOrEmpty(_taxNumber))
+        {
+            // Generate a random tax number if it is not already set
+            // Using RandomNumberGenerator for better randomness
+            _taxNumber = RandomNumberGenerator.GetInt32(100000, 999999).ToString();
+        }
+        else
+        {
+            Console.WriteLine("Tax number already generated.");
+        }
     }
+    
 
     public string GetTaxNumber()
     { 
