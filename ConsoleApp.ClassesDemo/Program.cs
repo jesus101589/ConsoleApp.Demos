@@ -1,4 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using ConsoleApp.ClassesDemo;
+
 Console.WriteLine("********** - Classes and Objects - **********");
 
 // Define an object of type Person
@@ -25,3 +27,35 @@ var person2 = new Person("Developer", "Two", "123456");
 person2.PrintFullName();
 person2.PrintInitials();
 person2.GenerateTaxNumber();
+var person2IDNumber = person2.GetIdNumber();
+Console.WriteLine(person2IDNumber);
+
+var teacher = new Teacher();
+teacher.LastName = "Salinas";
+teacher.FirstName = "Jesus";
+teacher.DateOfBirth = new DateOnly(2027, 10, 31);
+
+
+teacher.PrintFullName(); 
+teacher.PrintInitials(); 
+teacher.GenerateTaxNumber();
+var teacherTaxNumber = teacher.GetTaxNumber();
+Console.WriteLine(teacherTaxNumber);
+teacher.GenerateTeacherIdNumber();
+
+var teacherIdNumber = teacher.GetIdNumber();
+Console.WriteLine(teacherIdNumber);
+
+Student student = new();
+student.LastName = "Salinas";
+student.FirstName = "Jesus";
+student.DateOfBirth = new DateOnly(2027, 10, 31);
+
+
+student.PrintFullName(); 
+student.PrintInitials(); 
+student.GenerateTaxNumber();
+student.GenerateStudentIdNumber();
+var studentIdNumber = student.GetIdNumber();
+Console.WriteLine(studentIdNumber);
+

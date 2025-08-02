@@ -31,6 +31,7 @@ public class Person
 
     // Field Number
     private string _taxNumber;
+    protected string _idNumber = "N/A";
 
     public void PrintFullName()
     {
@@ -48,7 +49,7 @@ public class Person
         {
             // Generate a random tax number if it is not already set
             // Using RandomNumberGenerator for better randomness
-            _taxNumber = RandomNumberGenerator.GetInt32(100000, 999999).ToString();
+            _taxNumber = GetRandomNumber();
         }
         else
         {
@@ -60,5 +61,27 @@ public class Person
     public string GetTaxNumber()
     { 
         return _taxNumber;
+    }
+
+    public string GetIdNumber() 
+    {
+        return _idNumber;
+    }
+
+    public int GetAge() 
+    {
+        var age = DateTime.Now.Year - DateOfBirth.Year;
+        return age;
+    }
+
+    public int GetAge(int year) 
+    {
+        var age = year - DateOfBirth.Year;
+        return age;
+    }
+
+    protected string GetRandomNumber() 
+    {
+        return RandomNumberGenerator.GetInt32(100000, 999999).ToString();
     }
 }
