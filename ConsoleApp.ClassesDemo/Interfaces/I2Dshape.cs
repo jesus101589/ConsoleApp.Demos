@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp.ClassesDemo
+namespace ConsoleApp.ClassesDemo.Interfaces
 {
     public interface I2DShape
     {

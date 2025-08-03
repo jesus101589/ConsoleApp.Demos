@@ -1,4 +1,6 @@
-﻿namespace ConsoleApp.ClassesDemo
+﻿using ConsoleApp.ClassesDemo.Interfaces;
+
+namespace ConsoleApp.ClassesDemo
 {
     public class Rectangle : Polygon, I2DShape
     {
