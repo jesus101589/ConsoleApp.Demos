@@ -59,3 +59,28 @@ student.GenerateStudentIdNumber();
 var studentIdNumber = student.GetIdNumber();
 Console.WriteLine(studentIdNumber);
 
+
+//Polygon polygon = new Polygon(); // This line will cause a compile-time error because Polygon is an abstract class and cannot be instantiated directly.
+Rectangle rectangle = new(10, 20);
+var rectangleArea = rectangle.Area();
+Console.WriteLine($"Rectangle Area: {rectangleArea}");
+
+Square square = new(50);
+var squareArea = square.Area();
+Console.WriteLine($"Square Area: {squareArea}");
+
+Cuboid cuboid = new(1, 5, 7);
+var cuboidArea = cuboid.Area();
+var cuboidVolume = cuboid.Volume();
+var cuboidPerimeter = cuboid.Perimeter();
+Console.WriteLine($"Cuboid Area: {cuboidArea}");
+Console.WriteLine($"Cuboid Volume: {cuboidVolume}");
+Console.WriteLine($"Cuboid Perimeter: {cuboidPerimeter}");
+
+Sphere sphere = new(7);
+var sphereCircumference = sphere.Circumference();
+var sphereVolume = sphere.Volume();
+Console.WriteLine($"{nameof(Sphere)} Volume is: {sphereVolume}");
+Console.WriteLine($"{nameof(Sphere)} Circumference is: {sphereCircumference}");
+
+
