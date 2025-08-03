@@ -2,6 +2,8 @@
 using System.ComponentModel.Design;
 using System.Security.Cryptography;
 
+namespace ConsoleApp.ClassesDemo.Classes.PersonDemo;
+
 public class Person
 {
 

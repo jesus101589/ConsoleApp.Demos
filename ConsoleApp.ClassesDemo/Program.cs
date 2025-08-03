@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using ConsoleApp.ClassesDemo;
+using ConsoleApp.ClassesDemo.Classes.PersonDemo;
+using ConsoleApp.ClassesDemo.Classes.ShapeDemo;
 
 Console.WriteLine("********** - Classes and Objects - **********");
 
